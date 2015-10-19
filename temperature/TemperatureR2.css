@@ -1,0 +1,16 @@
+section {
+  margin: 10px;
+}
+
+body {
+  background-color: grey;
+  font-family: Verdana;
+}
+
+fieldset {
+  color: white;
+  width: 400px;
+  background-color: #487E1B;
+  padding-top: 15px;
+  padding-left: 15px;
+}
