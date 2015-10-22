@@ -12,10 +12,6 @@ var divide = document.getElementById("divide");
 
 buttonArray = [add, subtract, multiply, divide];
 
-function checkClick () {
-	console.log("you clicked on a button!")
-}
-
 
 
 /*
@@ -37,10 +33,11 @@ console.log("product test", multiplyFunction(4, 7));
 
 function addFunction (num1, num2) {
 	var sum = num1 + num2;
-	return sum;
+  console.log("sum", sum);
+	
 }
 
-console.log("sum test", addFunction(4, 7));
+//console.log("sum test", addFunction(4, 7));
 
 /*
   Create a function that subtracts two numbers
@@ -75,22 +72,49 @@ console.log("quotient test", divideFunction(4, 7));
   Return the value of the operation.
 
  */
+var firstNum = document.getElementById("first-number");
+var secondNum = document.getElementById("second-number");
 
- function mathOperation (first, second, operand) {
- 	return operand(first, second);
+
+function mathOperation (first, second, operand) {
+  console.log("test num 1", first);
+  console.log("test num 2", second);
+  operand(first, second);
  }
 
-var firstNum = parseInt(document.getElementById("first-number"));
 
-function valueTest () {
-	console.log("firstNum", firstNum.value);
+
+// function valueTest () {
+// 	console.log("firstNum", firstNum.value);
+//   console.log("secondNum", secondNum.value);
+// }
+
+function checkClick (first, second) {
+  console.log("you clicked on a button!")
+
+
+
 }
 
+add.addEventListener("click", mathOperation(Number(firstNum.value), Number(secondNum.value), addFunction);
 
 
-add.addEventListener("click", valueTest);
+
+
+add.addEventListener("click", function () {
+  console.log("firstNum", firstNum.value);
+  console.log("secondNum", secondNum.value);
+
+  mathOperation(Number(firstNum.value), Number(secondNum.value), addFunction);
+
+});
+
+//  mathOperation(1, 4, addFunction));
+
 subtract.addEventListener("click", checkClick);
+
 multiply.addEventListener("click", checkClick);
+
 divide.addEventListener("click", checkClick);
 
 
